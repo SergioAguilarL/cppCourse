@@ -4,11 +4,17 @@ set BUILD_DIR=build
 
 echo Select an application to build:
 echo 1. Book Storage App
+echo 2. Bank Account App
 set /p choice="Enter the number of your choice: "
 
 if "%choice%" == "1" (
     set APP_NAME=bookStorageApp
     set APP_FLAG=BOOK_STORAGE_APP
+) else if "%choice%" == "2" (
+
+    set APP_NAME=bankAccountApp
+    set APP_FLAG=BANK_ACCNT_APP
+
 ) else (
     echo Invalid choice.
     exit /b 1

@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.30.4)
+project(bankAccountApp)
+
+# Include directories for headers
+include_directories(include interface/include)
+
+# Source files
+set(SOURCES
+    source/bankAccntApp.cpp
+    interface/source/bankAccntClass.cpp
+)
+
+# Create a static library
+add_library(bankAccountApp STATIC ${SOURCES})
+
+# Specify where to place compiled files
+set_target_properties(bankAccountApp PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/output"
+)

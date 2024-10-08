@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.30.4)
 project(CppCourse)
 
 # Set output directories
@@ -18,3 +18,17 @@ if(bookStorageApp)
     target_link_libraries(BookStorageApp  bookStorageApp)
 
 endif()
+
+# Options to build specific apps
+option(bankAccountApp "Build the Bank account Application" OFF)
+
+# Conditional inclusion based on selected app
+if(bankAccountApp)
+    add_subdirectory(cppApps/bankAccountApp)
+    add_executable(BankAccountApp main/main.cpp)
+    target_include_directories(BankAccountApp  PRIVATE cppApps/bankAccountApp/include cppApps/bankAccountApp/interface/include)
+    target_compile_definitions(BankAccountApp PRIVATE ${APP_FLAG})
+    target_link_libraries(BankAccountApp  bankAccountApp)
+
+endif()
+
