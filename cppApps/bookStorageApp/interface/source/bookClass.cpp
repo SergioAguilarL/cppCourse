@@ -3,6 +3,17 @@
 
 /*The porpuse of this file is to implement book class method definition */
 
+/*Contructor & destructor */
+
+Book::Book(string title, string author, string bookNumber) : bookTitle(title), bookAuthor(author), bookISBN(bookNumber)
+{
+
+}
+
+Book::~Book()
+{
+    
+}
 /*Getters*/
 string Book::getBookTitle(void)
 {
@@ -39,6 +50,6 @@ void Book::setISBN(string bookNumber)
 void Book::displayBookInfo(void)
 {
 
-    cout << endl << "Book Info " << endl << "Title: " << bookTitle << "Author: " << bookAuthor << "ISBN: " << bookISBN;
+    cout << endl << "Book Info " << endl << "Title: " << bookTitle << " Author: " << bookAuthor << " ISBN: " << bookISBN;
 
 }
