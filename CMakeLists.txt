@@ -32,3 +32,13 @@ if(bankAccountApp)
 
 endif()
 
+# Conditional inclusion based on selected app
+if(STLApp)
+    add_subdirectory(cppApps/STLApp)
+    add_executable(STLAPP main/main.cpp)
+    target_include_directories(STLAPP  PRIVATE cppApps/STLApp/include)
+    target_compile_definitions(STLAPP PRIVATE ${APP_FLAG})
+    target_link_libraries(STLAPP  STLApp)
+
+endif()
+

@@ -7,6 +7,10 @@
 #include "bankAccountAppAll.hpp"
 #endif
 
+#ifdef STL_APP
+#include "STLApp.hpp"
+#endif
+
 
 
 
@@ -20,16 +24,23 @@ int main()
 
     #ifdef BOOK_STORAGE_APP
 
-        std::cout << "Executiung Book Strorage app " << std::endl;
+        std::cout << "Executing Book Strorage app " << std::endl;
 
         bookStorageApp();
     #endif
 
     #ifdef BANK_ACCNT_APP
 
-        std::cout << "Executiung Book Strorage app " << std::endl;
+        std::cout << "Executing bank account app " << std::endl;
 
         bankAccntApp();
+    #endif
+
+    #ifdef STL_APP
+
+        std::cout << "Executing STL account app " << std::endl;
+
+        STLApp();
     #endif
 
     return 0; 
