@@ -7,6 +7,9 @@ void STLApp(void)
 
     /*Implementation for STL app */
 
+    /*Vector practice*/
+    vectorPracticeFoo();
+
    
 
 }

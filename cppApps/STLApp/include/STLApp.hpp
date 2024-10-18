@@ -2,7 +2,7 @@
 #define STLAPP_HPP
 
 #include <iostream>
-
+#include "vectorUtils.hpp"
 void STLApp(void);
 
 

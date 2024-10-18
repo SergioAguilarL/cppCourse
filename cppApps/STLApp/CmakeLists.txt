@@ -7,6 +7,7 @@ include_directories(include )
 # Source files
 set(SOURCES
     source/STLApp.cpp
+    source/vectorUtils.cpp
 )
 
 # Create a static library
